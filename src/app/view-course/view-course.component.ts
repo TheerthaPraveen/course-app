@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewserviceService } from '../viewservice.service';
 
 @Component({
   selector: 'app-view-course',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewCourseComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ViewserviceService) { 
+    api.ViewserviceService().subscribe(
+      (Response)=>{
+        this.data=Response
+      }
+    )
+  }
 
   ngOnInit(): void {
   }
+
+  data:any=[
+
+  ]
+
+
 
 }
