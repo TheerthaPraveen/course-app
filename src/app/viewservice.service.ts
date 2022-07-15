@@ -7,8 +7,12 @@ import { Injectable } from '@angular/core';
 export class ViewserviceService {
 
   constructor(private http:HttpClient) {}
+  addcourse(course:any){
+    return this.http.post<any>("https://mylinkurcodesapp.herokuapp.com/addcourses",course);
+    }
+  
     ViewserviceService=()=>{
-      return this.http.get("https://mylinkurcodesapp.herokuapp.com/getcourses")
+      return this.http.get("https://mylinkurcodesapp.herokuapp.com/getcourses");
     }
    
 }

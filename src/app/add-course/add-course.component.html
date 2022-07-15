@@ -1,32 +1,35 @@
+
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
             <div class="row g-3">
+            <form #addcourse="ngForm" (ngSubmit)="Addcourse()">    
+
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-<label for="" class="form-label">Couse Title</label>
-<input type="text" class="form-control">
+<label for="" class="form-label">Course Title</label>
+<input type="text" class="form-control" [(ngModel)]="course.courseTitle" name="course Title">
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 <label for="" class="form-label">Duration</label>
-<input type="text" class="form-control">
+<input type="text" class="form-control" [(ngModel)]="course.courseDuration" name="Duration">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 <label for="" class="form-label">Description</label>
-<textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+<textarea name="" id="" cols="30" rows="10" class="form-control" [(ngModel)]="course.courseDescription" name="Description"></textarea>
 
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 <label for="" class="form-label">Venue</label>
-<input type="text" class="form-control">
+<input type="text" class="form-control" [(ngModel)]="course.courseVenue" name="Venue">
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-<label for="" class="form-label"></label>
-<input type="date" name="" id="" class="form-control">
+<label for="" class="form-label">Date</label>
+<input type="date" name="" id="" class="form-control" [(ngModel)]="course.courseDate" name="Date">
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -34,11 +37,14 @@
 
 
                 </div>
+            </form>
             </div>
 
 
 
         </div>
     </div>
+
+
 </div>
 
